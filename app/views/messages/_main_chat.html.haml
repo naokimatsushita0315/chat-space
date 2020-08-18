@@ -1,0 +1,44 @@
+.main_chat
+  .main_chat__group
+    .main_chat__group__co
+      .main_chat__group__co__name
+        kkkk
+      .main_chat__group__co__menbarlist
+        Menbar : masa
+    .main_chat__group__edit  
+      = link_to "#", class: "Contents__btn Contents__btn--edit" do 
+        Edit
+    
+      .Contents__massege
+       
+  .main_chat__message
+    .main_chat__message__box
+      .main_chat__message__box__info
+        .main_chat__message__box__info__username
+          masa
+        .main_chat__message__box__info__date
+          2020/8/14(木曜日)
+      .main_chat__message__box__message
+        おはようございます。
+        .main_chat__message__box__message__contennt
+    .main_chat__message__box
+      .main_chat__message__box__info
+        .main_chat__message__box__info__username
+          jinta
+        .main_chat__message__box__info__date
+          2020/8/14(木曜日)
+      .main_chat__message__box__message
+        こんばんは
+        .main_chat__message__box__message__contennt   
+        
+  .main_chat__messageform
+    .main_chat__messageform__contentformbox
+      .main_chat__messageform__contentformbox__text
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          =icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      -# %input{type: "submit", class "subumit-btn"}
+    .main_chat__messageform__contentformbox__submit
+      send
