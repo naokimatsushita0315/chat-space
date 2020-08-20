@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.side-bar{
+  height: 100vh;
+  width: 300px;
+  background-color:#253141 ;
+
+  &__header{
+  height: 100px;
+  width: 300px;
+  background-color:#253141;
+  padding: 20px;
+    &__username {
+      height: 20px;
+      width: 260px;
+      background-color:#253141;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+        &__userselect{
+         height: 20px;
+         width: 60px;
+         color: white;
+      }
+        &__user-select-icon{  
+         height: 20px;
+         width: 60px;   
+         background-color: #ffffff;
+         color:white;
+
+        } 
+        .fas{
+          color: white;
+          margin-left: 5px;
+        }
+        .far{
+          color: white;
+        }
+    }
+  }
+  &__grouplist{
+    height: calc(100vh - 100px);
+    width: 300px;
+    background-color:#2f3e51;
+    padding: 20px;
+    justify-content: space-between;
+  }
+     &__grouplistname{  
+      padding: 20px 0px 40px; 
+      margin-bottom: 5px;
+      height: 15px;  
+      width: 300px;
+    }
+     &__grouplistmassage{
+       padding: 20px 0px 40px;  
+       height: 11px;
+       width: 300px;
+    } 
+    color:#ffffff;
+
+  }
+  
+
+
+
+.main_chat {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color:#ffffff;
+  &__group{
+  height: 100px;
+  width: calc(100vw - 300px);
+  background-color:#ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+    &__co{
+      height: 100px;
+      width: 72px;
+      &__name{
+        height: 35px;
+        font-size: 20px;
+        width: 72px;
+      }
+      &__menbarlist{
+        height: 12px;
+        width: 100px;
+        font-size: 12px;
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+    &__edit{
+
+      width: 72px;
+      border: 1px solid #38aef0;
+      color: #38aef0;
+      height: 40px;
+      line-height: 40px;
+      .Contents__btn {
+        padding-left: 20px;
+      }  
+    }
+  }
+
+  &__message{
+    height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
+    background-color:#fafafa;
+    padding: 35px 40px 0;
+    &__box{ 
+      height: 100px;
+      &__box__info{
+        height: 35px;
+        display: flex;
+        &__box__info__username{
+          font-size: 16px;
+          font-color: #333333;
+          height: 16px;
+        }
+        &__box__info__date{
+          font-size: 12px;
+          font-color: #999999;
+          padding: 0px 0px 0px 10px;
+          width: 150px;
+          height: 16px;
+          padding-left: 10px;
+        }
+      }
+      
+    }
+  }
+  
+  &__messageform{
+    background-color: #dddddd;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    display: flex;
+    
+    
+
+    &__contentformbox{
+      padding: 0px 10px 0px 15px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      
+      background-color: #ffffff;
+      &__contentformbox__text{
+        height: 50px;
+        border: none;
+        width: 100%;
+        color: #434a54;
+        border-style: none;
+        padding: 0px 0px 10px;
+      }
+      .input-box{ 
+       
+        display: flex;
+        width: 100%;
+        position: relative;
+        .input-box__text{ 
+          border: none;
+          height: 50px;
+          width: 100%;
+      }
+      .input-box__image{
+        position: absolute;
+        right: 10px;
+        line-height: 50px;
+        font-size: 25px;
+      }
+    
+
+        }
+    } 
+      .input-box__image__file{
+        display: none;
+      }
+        
+      
+    &__contentformbox__submit{
+      background-color: #38AEF0;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      font-size: 16px;
+      line-height: 50px;
+
+    }
+  }
+
+
+}
