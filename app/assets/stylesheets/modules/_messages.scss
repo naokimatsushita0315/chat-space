@@ -16,6 +16,8 @@
   width: 300px;
   background-color:#253141;
   padding: 20px;
+  // display: flex;
+  // justify-content: space-between;
     &__username {
       height: 20px;
       width: 260px;
@@ -97,7 +99,8 @@
       }
     }
     &__edit{
-
+      // margin: 28px 0px 0px;
+      // padding: 20px;
       width: 72px;
       border: 1px solid #38aef0;
       color: #38aef0;
@@ -133,7 +136,11 @@
           padding-left: 10px;
         }
       }
-      
+      &__box__message{
+
+        &__box__message__contennt{
+        }
+      }
     }
   }
   
