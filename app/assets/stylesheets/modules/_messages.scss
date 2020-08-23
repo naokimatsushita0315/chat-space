@@ -25,25 +25,24 @@
       font-size: 16px;
       display: flex;
       justify-content: space-between;
-        &__userselect{
-         height: 20px;
-         width: 60px;
-         color: white;
+      &__userselect{
+        height: 20px;
+        width: 60px;
+        color: white;
       }
-        &__user-select-icon{  
-         height: 20px;
-         width: 60px;   
-         background-color: #ffffff;
-         color:white;
-
-        } 
-        .fas{
-          color: white;
-          margin-left: 5px;
-        }
-        .far{
-          color: white;
-        }
+      &__user-select-icon{  
+        height: 20px;
+        width: 60px;   
+        background-color: #ffffff;
+        color:white;
+      } 
+      .fas{
+        color: white;
+        margin-left: 5px;
+      }
+      .far{
+        color: white;
+      }
     }
   }
   &__grouplist{
@@ -52,22 +51,23 @@
     background-color:#2f3e51;
     padding: 20px;
     justify-content: space-between;
-  }
-     &__grouplistname{  
-      padding: 20px 0px 40px; 
-      margin-bottom: 5px;
-      height: 15px;  
-      width: 300px;
+    a {
+      color:#ffffff;
+      text-decoration: none;
+      &__grouplistname{  
+        padding: 20px 0px 40px; 
+        margin-bottom: 5px;
+        height: 15px;  
+        width: 300px;
+      }
+      &__grouplistmassage{
+        padding: 20px 0px 40px;  
+        height: 11px;
+        width: 300px;
+      } 
     }
-     &__grouplistmassage{
-       padding: 20px 0px 40px;  
-       height: 11px;
-       width: 300px;
-    } 
-    color:#ffffff;
-
   }
-  
+}
 
 
 
@@ -150,15 +150,12 @@
     height: 90px;
     padding: 20px 50px 20px 40px;
     display: flex;
-    
-    
 
     &__contentformbox{
       padding: 0px 10px 0px 15px;
       border: none;
       height: 50px;
       width: 100%;
-      
       background-color: #ffffff;
       &__contentformbox__text{
         height: 50px;
@@ -177,6 +174,7 @@
           border: none;
           height: 50px;
           width: 100%;
+        }
       }
       .input-box__image{
         position: absolute;
@@ -184,9 +182,6 @@
         line-height: 50px;
         font-size: 25px;
       }
-    
-
-        }
     } 
       .input-box__image__file{
         display: none;
@@ -203,9 +198,6 @@
       padding: 0 30px;
       font-size: 16px;
       line-height: 50px;
-
     }
   }
-
-
 }
