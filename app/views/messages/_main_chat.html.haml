@@ -32,13 +32,12 @@
         .main_chat__message__box__message__contennt   
         
   .main_chat__messageform
-    .main_chat__messageform__contentformbox
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .main_chat__messageform__contentformbox__text
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          =icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Hidden'
       -# %input{type: "submit", class "subumit-btn"}
-    .main_chat__messageform__contentformbox__submit
-      send
+     = f.submit 'Send', class: 'Form__submit'
