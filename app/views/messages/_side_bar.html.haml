@@ -1,18 +1,21 @@
 .side-bar
   .side-bar__header
     .side-bar__header__username
-      = current_user.name
       .side-bar__header__username__userselect
-        masa
+        = current_user.name
       .side-bar__header__username__userserect-icon
-        <i class="far fa-edit"></i>
-      = link_to edit_user_path(current_user) do 
-        = icon('fas', 'cog')
+        = link_to new_group_path(current_user)do
+          = icon('far', 'edit')
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog')
   .side-bar__grouplist
-    .side-bar__grouplistname
-      techcamp
-    .side-bar__grouplistmassage
-      まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-bar__grouplist__Group
+        = link_to '#' do
+          .side-bar__grouplistname
+            techcamp
+          .side-bar__grouplistmassage
+            まだメッセージがありません
 
       
   
