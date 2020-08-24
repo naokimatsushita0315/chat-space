@@ -12,33 +12,13 @@
       .Contents__massege
        
   .main_chat__message
-    .main_chat__message__box
-      .main_chat__message__box__info
-        .main_chat__message__box__info__username
-          masa
-        .main_chat__message__box__info__date
-          2020/8/14(木曜日)
-      .main_chat__message__box__message
-        おはようございます。
-        .main_chat__message__box__message__contennt
-    .main_chat__message__box
-      .main_chat__message__box__info
-        .main_chat__message__box__info__username
-          jinta
-        .main_chat__message__box__info__date
-          2020/8/14(木曜日)
-      .main_chat__message__box__message
-        こんばんは
-        .main_chat__message__box__message__contennt   
-        
+    = render @messages    
   .main_chat__messageform
-    .main_chat__messageform__contentformbox
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .main_chat__messageform__contentformbox__text
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          =icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      -# %input{type: "submit", class "subumit-btn"}
-    .main_chat__messageform__contentformbox__submit
-      send
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
+          = icon('far', 'image')
+        = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
+
