@@ -11,11 +11,11 @@
   .side-bar__grouplist
     - current_user.groups.each do |group|
       .side-bar__grouplist__Group
-        = link_to '#' do
+        = link_to group_messages_path(group)  do
           .side-bar__grouplistname
-            techcamp
+            = group.name
           .side-bar__grouplistmassage
-            まだメッセージがありません
+            = group.show_last_message
 
       
   

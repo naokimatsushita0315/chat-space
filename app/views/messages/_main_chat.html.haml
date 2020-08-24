@@ -12,32 +12,13 @@
       .Contents__massege
        
   .main_chat__message
-    .main_chat__message__box
-      .main_chat__message__box__info
-        .main_chat__message__box__info__username
-          masa
-        .main_chat__message__box__info__date
-          2020/8/14(木曜日)
-      .main_chat__message__box__message
-        おはようございます。
-        .main_chat__message__box__message__contennt
-    .main_chat__message__box
-      .main_chat__message__box__info
-        .main_chat__message__box__info__username
-          jinta
-        .main_chat__message__box__info__date
-          2020/8/14(木曜日)
-      .main_chat__message__box__message
-        こんばんは
-        .main_chat__message__box__message__contennt   
-        
+    = render @messages    
   .main_chat__messageform
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .main_chat__messageform__contentformbox__text
-      .input-box
         = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
         = f.label :image, class: 'Form__inputImage' do
-          = icon('far', 'image', class: 'Form__icon')
-          = f.file_field :image, class: 'Hidden'
-      -# %input{type: "submit", class "subumit-btn"}
-     = f.submit 'Send', class: 'Form__submit'
+          = icon('far', 'image')
+        = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
+
