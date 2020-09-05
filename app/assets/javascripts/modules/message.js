@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="MessageBox">
+        `<div class="MessageBox" data-message-id=${message.id}>
           <div class="MessageInfo">
             <div class="MessageInfo__userName">
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="MessageBox">
+      `<div class="MessageBox" data-message-id=${message.id}>
         <div class="MessageInfo">
           <div class="MessageInfo__userName">
             ${message.user_name}
@@ -53,6 +53,8 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      let last_message_id = $('.MessageBox:last').data("message-id") || 0;
+      console.log(last_message_id)
       let html = buildHTML(data);
       console.log(data)
       $('.main_chat__message').append(html);    
@@ -69,4 +71,5 @@ $(function(){
        
       });
     });
+    
   });
