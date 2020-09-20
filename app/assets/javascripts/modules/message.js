@@ -40,7 +40,7 @@ $(function(){
     };
   }
 
-  $('.Form').on('submit', function(e){
+  $('#test').on('submit', function(e){
     e.preventDefault();
     let formData = new FormData(this);
     let url = $(this).attr('action');
@@ -53,23 +53,23 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      let last_message_id = $('.MessageBox:last').data("message-id") || 0;
-      console.log(last_message_id)
-      let html = buildHTML(data);
-      console.log(data)
+      let html = buildHTML(data)
       $('.main_chat__message').append(html);    
       $('.main_chat__message').animate({ scrollTop: $('.main_chat__message')[0].scrollHeight});
   
       $('form')[0].reset(); 
         //チェックボックスにチェックが入ったら
     })
+    .fail(function() {
+      alert("メッセージが投稿できませんでした。");
+    })
     .always(function() {
        
           //ボタンを有効にする
        
-      $('.Message__content').prop('disabled', false);
+      $('.Form__submit').prop('disabled', false);
        
       });
     });
     
-  });
+});
